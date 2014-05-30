@@ -1,5 +1,6 @@
-package com.ynov.ftpclientapp.app.socket;
+package com.ynov.ftpclientapp.app.socket.command;
 
+import com.ynov.ftpclientapp.app.socket.NetworkConnection;
 import com.ynov.ftpclientapp.app.socket.action.Connect;
 
 import java.io.IOException;
