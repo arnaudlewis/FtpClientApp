@@ -1,4 +1,4 @@
-package com.ynov.ftpclientapp.app.socket.flow;
+package com.ynov.ftpclientapp.app.socket;
 
 /**
  * Created by arnaud on 31/05/2014.
