@@ -6,4 +6,10 @@ package com.ynov.ftpclientapp.app.socket;
 public interface ServerResponse<T> {
 
     public T getResponse();
+
+    public void setResponse(T response);
+
+    public String getDetails();
+
+    public void setDetails(String details);
 }

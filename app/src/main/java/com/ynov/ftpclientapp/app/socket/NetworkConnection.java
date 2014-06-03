@@ -1,7 +1,5 @@
 package com.ynov.ftpclientapp.app.socket;
 
-import com.ynov.ftpclientapp.app.socket.action.Connect;
-
 import java.net.Socket;
 
 /**
@@ -13,7 +11,7 @@ public class NetworkConnection {
     private String password;
 
     private static final String DEFAULT_LOGIN ="anonymous";
-    private static final String DEFAULT_PASSWORD = "";
+    private static final String DEFAULT_PASSWORD = "anonymous";
 
     public NetworkConnection(String login, String password) {
         this.login = login;
@@ -24,7 +22,19 @@ public class NetworkConnection {
         this(DEFAULT_LOGIN, DEFAULT_PASSWORD);
     }
 
-    public Thread connect(Socket socket) {
-        return new Thread(new Connect(socket, login, password));
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

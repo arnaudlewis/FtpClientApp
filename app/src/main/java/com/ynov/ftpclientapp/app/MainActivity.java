@@ -5,12 +5,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.ynov.ftpclientapp.app.socket.ServerNetwork;
+import com.ynov.ftpclientapp.app.socket.ServerNetworkImpl;
+
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ServerNetwork server = new ServerNetworkImpl();
+        server.create("ftp.free.fr");
     }
 
 
